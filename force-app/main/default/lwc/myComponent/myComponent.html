@@ -1,0 +1,21 @@
+<template>
+    <lightning-card  title={_title}>
+        <div class="controlPanel">
+            <lightning-input type="text" label="Task title" value={_currentTask} onchange={handleInputChange}></lightning-input>
+            <lightning-button label="Create" onclick={handleClick}></lightning-button>
+        </div>
+
+        <div class="bodyCard">
+            <ul class="slds-m-around_medium">
+                <template for:each={_tasks} for:item="task">
+                    <c-my-child-component key={task.id} task={task} onremove={handleRemoveTask}></c-my-child-component>
+                </template>
+            </ul>
+        </div>
+
+        <div slot="footer">
+            <p>Vanguard-Almunia</p>
+            <p onclick={handleAccount}>Current Account: {_currentAccountName}</p>
+        </div>
+    </lightning-card>
+</template>

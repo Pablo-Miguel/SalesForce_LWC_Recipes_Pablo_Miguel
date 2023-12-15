@@ -1,0 +1,10 @@
+.controlPanel {
+    padding: 10px;
+}
+.controlPanel > lightning-button {
+    margin: 2px;
+    float: right;
+}
+.bodyCard {
+    padding: 10px;
+}
